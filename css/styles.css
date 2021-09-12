@@ -1,0 +1,206 @@
+/* antonio-regular - latin */
+@font-face {
+     font-family: 'Antonio';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+     url('../fonts/antonio-v1-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+     url('../fonts/antonio-v1-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* spartan-regular - latin */
+@font-face {
+     font-family: 'Spartan';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+     url('../fonts/spartan-v3-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+     url('../fonts/spartan-v3-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* spartan-700 - latin */
+@font-face {
+     font-family: 'Spartan';
+     font-style: normal;
+     font-weight: 700;
+     src: local(''),
+     url('../fonts/spartan-v3-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+     url('../fonts/spartan-v3-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body{
+     font-family: Spartan;
+     font-size: 14px;
+     line-height: 25px;
+     background: #070724 url(../img/bg-image.png) no-repeat center center;
+     background-size: cover;
+     color: #fff;
+}
+
+/* HEADER */
+
+.header-container{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     max-width: 1350px;
+     padding: 20px 25px;
+     margin: 0 auto;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+     margin-bottom: 126px;
+     color: #fff;
+}
+.logo{
+     font-family: Antonio;
+     font-size: 28px;
+     line-height: 36px;
+     letter-spacing: -1.05px;
+     text-transform: uppercase;
+     color: #fff;
+     text-decoration: none;
+     white-space: nowrap;
+}
+.main-nav__items{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     list-style: none;
+}
+.navlist__item{
+     cursor: pointer;
+     margin-left: 33px;
+     font-weight: bold;
+     font-size: 11px;
+     line-height: 25px;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+}
+
+
+/* MAIN */
+.container{
+     max-width: 1110px;
+     padding: 0 20px;
+     margin-left: auto;
+     margin-right: auto;
+}
+.site-main__container{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 87px;
+}
+.planet-info{
+     width: 350px;
+     display: flex;
+     flex-direction: column;
+}
+.planet-img{
+     margin-left: 100px;
+}
+.main-info__title{
+     margin: 0;
+     margin-bottom: 23px;
+     font-family: Antonio;
+     font-size: 80px;
+     line-height: 104px;
+     text-transform: uppercase;
+}
+.main-info__desc{
+     margin: 0;
+     margin-bottom: 24px;
+}
+.source-text{
+     opacity: 0.5;
+}
+.source-text__link{
+     font-weight: bold;
+     text-decoration: underline;
+     color: #fff;
+}
+.planet-info__btnList{
+     padding: 0;
+     list-style: none;
+}
+.planet-info__bntItem{
+     cursor: pointer;
+     font-weight: bold;
+     letter-spacing: 2.57143px;
+     text-transform: uppercase;
+     padding: 12px 28px 11px 28px;
+}
+.btnItem__num{
+     opacity: 0.5;
+}
+.activeBtn{
+     background-color: #419EBB;
+}
+
+/* FOOTER */
+
+.about__list{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     list-style: none;
+     margin-left: -30px;
+}
+.about__item{
+     width: 255px;
+     margin-left: 30px;
+     border: 1px solid rgba(255, 255, 255, 0.171);
+     padding: 20px 23px 27px 23px;
+}
+.about-title{
+     margin: 0;
+     font-weight: bold;
+     font-size: 11px;
+     line-height: 25px;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     opacity: 0.5;
+}
+.about-text{
+     margin: 0;
+     font-family: Antonio;
+     font-size: 40px;
+     line-height: 52px;
+     letter-spacing: -1.5px;
+     text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+     .header-container{
+          flex-direction: column;
+     }
+     .navlist__item:first-child{
+          margin-left: 0;
+     }
+     .site-main__container{
+          flex-direction: column;
+     }
+     .planet-img{
+          margin-left: 10px;
+     }
+     .planet-info{
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+     }
+     .planet-main-info{
+          width: 340px;
+     }
+     .planet-info__btnList{
+          margin-left: 70px;
+     }
+     .planet-info__bntItem{
+          white-space: nowrap;
+     }
+     .about__item{
+          width: 165px;
+          padding: 16px;
+          margin-left: 11px;
+          white-space: nowrap;
+     }
+     .about__item:first-child{
+          margin-left: 0;
+     }
+}

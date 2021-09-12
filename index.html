@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets Vue Project</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header-container">
+            <a href="#" class="logo">The planets</a>
+            <nav class="main-nav">
+                <ul class="main-nav__items navlist">
+                    <li class="navlist__item" v-for="planet in planets">
+                        <span class="navlist__title" @click="selectedPlanet = planet" :style="[selectedPlanet === planet ? {color:planetList[planet].background}: {color: '#fff'}]">{{ planet }}</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="site-main__container container">
+            <img :src="planetList[selectedPlanet][selectedButton].img" alt="" class="planet-img" width="450" height="450">
+            <div class="planet-info">
+                <div class="planet-main-info">
+                    <h2 class="main-info__title" v-show="selectedPlanet == planet" v-for="(planet, index) in planets">{{ planet }}</h2>
+                    <p class="main-info__desc">{{ planetList[selectedPlanet][selectedButton].text }}</p>
+                    <p class="source-text">Source: <a class="source-text__link" href="#">Wikipedia</a></p>
+                </div>
+                <ul class="planet-info__btnList">
+                    <li class="planet-info__bntItem" @click="selectedButton = btn"
+                    :class="{activeBtn: selectedButton == btn}" :style="[selectedButton === btn ? {'background-color': planetList[selectedPlanet].background} : {'background-color': 'transparent'}]"
+                    v-for="(btn,index) in buttonList"><span class="btnItem__num">0{{ index+1 }} </span>{{ btn }}</li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer__container container">
+            <ul class="about__list">
+                <li class="about__item" v-for="aboutTitle in aboutList">
+                    <p class="about-title">{{ aboutTitle }}</p>
+                    <p class="about-text">{{ planetList[selectedPlanet].about[aboutTitle] }}</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
